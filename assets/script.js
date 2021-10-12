@@ -7,10 +7,16 @@ function runThisWeather() {
     //declare constant for clear button
     const clearEl = document.getElementById("clearHis");
 
+    //declare variable for persistence and retrieval
+    let searchHis = JSON.parse(localStorage.getItem("search")) || [];
+
     //capture search bar click
     searchEl.addEventListener("click",function() {
-        const searchTerm = inputEl.value;
-        console.log(searchTerm);
+        const searchIn = inputEl.value;
+        //create search array and add city to array
+        searchHis.push(searchIn);
+        //set persistence
+        localStorage.setItem("searched",JSON.stringify(searchHis));
     })
 };
 
