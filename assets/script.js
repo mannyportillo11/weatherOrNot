@@ -7,6 +7,9 @@ function runThisWeather() {
     //declare constant for clear button
     const clearEl = document.getElementById("clearHis");
 
+    //declare constant for history form to display searched cities list
+    const historyEl = document.getElementById("hist");
+
     //declare variable for persistence and retrieval
     let searchHis = JSON.parse(localStorage.getItem("search")) || [];
 
