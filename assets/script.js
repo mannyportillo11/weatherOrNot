@@ -13,9 +13,15 @@ function runThisWeather() {
     //declare variable for persistence and retrieval
     let searchHis = JSON.parse(localStorage.getItem("search")) || [];
 
+    function weather () {
+    console.log("test");
+    }
+
     //capture search bar click
     searchEl.addEventListener("click",function() {
         const searchIn = inputEl.value;
+        //run function with search value
+        weather(searchIn);
         //create search array and add city to array
         searchHis.push(searchIn);
         //set persistence
@@ -38,7 +44,7 @@ function runThisWeather() {
             newHisItem.setAttribute("class", "cities");
             newHisItem.setAttribute("value", searchHis[i]);
             newHisItem.addEventListener("click",function() {
-                //create weather function here
+                weather(newHisItem.value);
             })
             historyEl.append(newHisItem);
         }
