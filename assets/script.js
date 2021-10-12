@@ -13,9 +13,14 @@ function runThisWeather() {
     //declare variable for persistence and retrieval
     let searchHis = JSON.parse(localStorage.getItem("search")) || [];
 
-    function weather () {
-    console.log("test");
-    }
+    //declare variables to get current weather
+    const nameEl = document.getElementById("curentCityName");
+    const currentPicEl = document.getElementById("current-pic");
+    const currentTempEl = document.getElementById("temperature");
+
+    function weather (thisCity) {
+            console.log (thisCity);
+    };
 
     //capture search bar click
     searchEl.addEventListener("click",function() {
