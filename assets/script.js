@@ -20,7 +20,29 @@ function runThisWeather() {
         searchHis.push(searchIn);
         //set persistence
         localStorage.setItem("searched",JSON.stringify(searchHis));
+        createHistory();
     })
+
+    //capture clear button click
+    clearEl.addEventListener("click",function() {
+        // clear searched history array
+        searchHistory = [];
+        createHistory();
+    })
+
+    function createHistory() {
+        historyEl.innerHTML = "";
+        for (let i = 0 ; i < searchHis.length ; i++) {
+            const newHisItem = document.createElement("input");
+            newHisItem.setAttribute("type","text");
+            newHisItem.setAttribute("class", "cities");
+            newHisItem.setAttribute("value", searchHis[i]);
+            newHisItem.addEventListener("click",function() {
+                //create weather function here
+            })
+            historyEl.append(newHisItem);
+        }
+    }
 };
 
 
