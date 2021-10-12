@@ -1,0 +1,56 @@
+/* HEADER STYLING */
+.header {
+    background-image: linear-gradient(to right, blue , purple);
+    text-align: center;
+    width: 100%;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+  }
+
+  a:link {
+      color: white;
+  }
+
+  a:active {
+    color: white;
+  }
+  
+  a:hover {
+      color: white;
+  }
+  a:visited {
+      color: white;
+  }
+
+  /* SEARCH STYLING */
+  .search-container {
+      background-color: purple;
+  }
+  
+  .search-title {
+      margin: 10px auto;
+      font-size: large;
+      font-style: bold;
+  }
+
+  /* BUTTON STYLING */
+  .buttons {
+      border-radius: 10px;
+      margin: 5px auto;
+  }
+
+  .buttons:hover {
+    color: blue;
+    background-color: rgba(128, 0, 128, 0.467);
+    border-style: solid;
+    border-color: blue;
+  }
+ 
+  /* FOOTER STYLING */
+  footer {
+    text-align: center;
+    background-color: gray;
+    border-style: solid;
+    border-color: black;
+}
